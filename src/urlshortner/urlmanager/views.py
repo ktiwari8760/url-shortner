@@ -9,6 +9,7 @@ from django.utils import timezone
 # Create your views here.
 class ViewHandler(APIView):
     def get(self, request,pk):
+        print(pk)
         if request.method == 'GET':
             if request.headers.get('json') == "true":
                 try:
